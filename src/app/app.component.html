@@ -1,0 +1,77 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h3>Random Users</h3>
+          <div class="row mb-3"></div>
+          <button (click)="callRandomUsers()" class="btn btn-primary">Get random users</button>
+          <div class="row mb-3"></div>
+          <div class="table-responsive" *ngIf="data">
+            <table class="table table-sm table-bordered table-hover table-striped">
+              <thead>
+                <tr class="text-center text-uppercase bg-info text-white">
+                  <th>--</th>
+                  <th>ID</th>
+                  <th>UID</th>
+                  <th>address</th>
+                  <th>avatar</th>
+                  <th>credit_card</th>
+                  <th>date_of_birth</th>
+                  <th>email</th>
+                  <th>employment</th>
+                  <th>first_name</th>
+                  <th>gender</th>
+                  <th>last_name</th>
+                  <th>password ??</th>
+                  <th>phone_number</th>
+                  <th>social_insurance_number</th>
+                  <th>subscription</th>
+                  <th>username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let d of data; let i = index;">
+                  <td>
+                    <button class="btn btn-sm btn-warning" (click)="sendRandomUserInfo(data[i])">Show</button>
+                  </td>
+                  <td>{{d?.id}}</td>
+                  <td>{{d?.uid}}</td>
+                  <td>{{d?.address?.city}}</td>
+                  <td>
+                    <img src="{{d?.avatar}}" alt="avatar" width="50px" height="50px">
+                  </td>
+                  <td>{{d?.credit_card?.cc_number}}</td>
+                  <td>{{d?.date_of_birth}}</td>
+                  <td>{{d?.email}}</td>
+                  <td>{{d?.employment?.title}}</td>
+                  <td>{{d?.first_name}}</td>
+                  <td>{{d?.gender}}</td>
+                  <td>{{d?.last_name}}</td>
+                  <td>{{d?.password}}</td>
+                  <td>{{d?.phone_number}}</td>
+                  <td>{{d?.social_insurance_number}}</td>
+                  <td>{{d?.subscription?.plan}}</td>
+                  <td>{{d?.username}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow shadow-sm border border-primary">
+        <div class="card-body">
+          <h3 class="card-title">Random user information</h3>
+          <div class="row mb-3"></div>
+          --
+          <div>Username: {{randomData?.username}}</div>
+          <div>first_name: {{randomData?.first_name}}</div>
+          <div>last_name: {{randomData?.last_name}}</div>
+          <div>phone_number: {{randomData?.phone_number}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,17 +1,27 @@
-# front-end-exercise
+# FrontendExercise
 
-Fetch from this API endpoint: https://random-data-api.com/api/users/random_user?size=10
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.8.
 
-This will return ten random users.
+## Development server
 
-After fetching the data from API endpoint:
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-- Store it in state.
-- Show each user's basic info in a card.
-- Render the data based on the state.
+## Code scaffolding
 
-Optional: Add a button to refresh data from API
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Hints:
-Create a custom component for the card, which accepts a user JSON object. 
-Map through the data returned from the API and render each one using the custom component.
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
